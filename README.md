@@ -2,9 +2,11 @@ vim_config
 ==========
 
 To start:
+
     git clone https://github.com/bcarls/vim_config
 
 To add plugins:
+
     git submodule add https://github.com/wincent/Command-T bundle/Command-T
     git submodule init
     git submodule update
@@ -28,10 +30,12 @@ To add plugins:
     git submodule update
 
 To compile Command-T:
+
     cd ~/.vim/bundle/Command-T/ruby/command-t
     ruby extconf.rb
     make
     
 To link everything:
+
     ln -s ~/vim_config ~/.vim
     ln -s ~/vim_config/.vimrc ~/.vimrc
