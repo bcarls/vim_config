@@ -3,9 +3,9 @@ vim_config
 
 ## To install:
 
-    git clone https://github.com/bcarls/vim_config
     rm ~/.vimrc 
     rm -rf ~/.vim
+    git clone https://github.com/bcarls/vim_config
     cd vim_config
     chmod +x setup.sh
     ./setup.sh
