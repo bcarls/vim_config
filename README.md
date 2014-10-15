@@ -8,6 +8,7 @@ vim_config
     rm -rf ~/.vim
     cd vim_config
     chmod +x ./setup.sh
+    ./setup.sh
 
 ## To install a new plugin, for example nerdcommenter:
 
