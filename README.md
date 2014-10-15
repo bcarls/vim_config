@@ -1,9 +1,31 @@
 vim_config
 ==========
 
-To start:
+## To install:
 
     git clone https://github.com/bcarls/vim_config
+    rm ~/.vimrc 
+    rm -rf ~/.vim
+    cd vim_config
+    chmod +x ./setup.sh
+
+## To install a new plugin, for example nerdcommenter:
+
+    git submodule add https://github.com/scrooloose/nerdcommenter.git
+    git submodule init
+    git submodule update
+    
+## To periodically update the plugins:
+
+    git submodule update
+    
+## If Command-T is updated, you will have to recompile:
+
+    cd ~/.vim/bundle/Command-T/ruby/command-t
+    ruby extconf.rb
+    make
+
+## For future reference, this is what was done to setup everything
 
 To add plugins:
 
