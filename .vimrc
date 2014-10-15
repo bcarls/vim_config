@@ -72,9 +72,7 @@ vnoremap <tab> %
 " plugins under the ~/.vim/bundle directory
 " Other plugin options appear here
 " ==================================================================================
-call pathogen#infect() 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect() 
 filetype plugin indent on
 
 
