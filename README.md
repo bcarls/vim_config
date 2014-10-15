@@ -20,6 +20,11 @@ vim_config
 
     git submodule update
     
+## To remove a plugin:
+
+    git submodule deinit bundle/nerdcommenter
+    git rm bundle/nerdcommenter
+    
 ## If Command-T is updated, you will have to recompile:
 
     cd ~/.vim/bundle/Command-T/ruby/command-t
