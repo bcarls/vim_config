@@ -21,6 +21,6 @@ vim_config
     git submodule add git://github.com/tpope/vim-sensible.git bundle/vim-sensible
     git submodule init
     git submodule update
-    git://github.com/jeffkreeftmeijer/vim-numbertoggle.git bundle/vim-numbertoggle
+    git submodule add git://github.com/jeffkreeftmeijer/vim-numbertoggle.git bundle/vim-numbertoggle
     git submodule init
     git submodule update
