@@ -20,7 +20,6 @@ set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set number
 set wildmenu
 set wildmode=list:longest,full
 set nohidden
@@ -112,7 +111,11 @@ set guioptions=ageimrLt
 set showtabline=2
 set cursorline " Turn on the line shadowing indicating where the cursor is
 set ttyfast " Send more characters for redraws
-set relativenumber " Change linenumbers to distance from current line
+" Turn on relative numbers for normal mode and absolute numbers for inset mode
+set relativenumber 
+set number
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 "Turn off system beep
 set vb t_vb=
 
