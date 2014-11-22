@@ -33,7 +33,7 @@ set smarttab      " insert tabs on the start of a line according to
 " change the mapleader from \ to ,
 let mapleader=","
 inoremap jj <Esc>
-nmap ,n <Esc>:tabnew 
+" nmap ,n <Esc>:tabnew 
 " Jumps to next row in editor in the case of wrapped lines
 nnoremap j gj
 nnoremap k gk
@@ -49,6 +49,10 @@ nnoremap ; :
 set undofile
 set showmode
 set showcmd
+" Allow fast buffer movement
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
 
 " ==================================================================================
 " Make searching easier
@@ -80,8 +84,13 @@ filetype plugin indent on
 set laststatus=2 " Always show the statusline
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 
 " Set up Powerline
 set laststatus=2 " Always show the statusline
