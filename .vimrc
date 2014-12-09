@@ -22,7 +22,8 @@ set shiftwidth=2
 set softtabstop=2
 set wildmenu
 set wildmode=list:longest,full
-set nohidden
+"set nohidden
+set hidden
 set smarttab      " insert tabs on the start of a line according to
                   "    shiftwidth, not tabstop
 
