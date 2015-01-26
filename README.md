@@ -17,8 +17,8 @@ vim_config
     git submodule update
     
 ## To periodically update the plugins:
-
-    git submodule update
+    cd ~/vim_config/bundle
+    git submodule foreach git pull
     
 ## To remove a plugin:
 
