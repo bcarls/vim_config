@@ -12,6 +12,7 @@ vim_config
 
 ## To install a new plugin, for example nerdcommenter:
 
+    cd vim_config/bundle/
     git submodule add https://github.com/scrooloose/nerdcommenter.git
     git submodule init
     git submodule update
