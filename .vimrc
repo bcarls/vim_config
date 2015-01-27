@@ -56,6 +56,7 @@ map gp :bp<cr>
 map gd :bd<cr>
 " Make getting to NERDTree easier
 nmap <leader>ne :NERDTree<cr>
+nmap <leader>nc :NERDTreeClose<cr>
 
 
 " ==================================================================================
