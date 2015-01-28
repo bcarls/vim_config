@@ -112,8 +112,12 @@ set laststatus=2 " Always show the statusline
 " The statusline options appear under plugins since I am using powerline
 " ==================================================================================
 set t_Co=256
+" Turn on molokai
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 " Turn on jellybeans
-colorscheme jellybeans
+" colorscheme jellybeans
 " Turn on solarized
 "set background=light
 "colorscheme solarized
