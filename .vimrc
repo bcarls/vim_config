@@ -107,20 +107,27 @@ set laststatus=2 " Always show the statusline
   "set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 "endif
 
+" Set up vim-commentary
+autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
+
 " ==================================================================================
 " GUI options
 " The statusline options appear under plugins since I am using powerline
 " ==================================================================================
 set t_Co=256
 " Turn on molokai
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
+" colorscheme molokai
+" let g:molokai_original = 1
+" let g:rehash256 = 1
+set guifont=Inconsolata\ for\ Powerline:h15
 " Turn on jellybeans
-" colorscheme jellybeans
+colorscheme jellybeans
 " Turn on solarized
 "set background=light
 "colorscheme solarized
+if has("gui_macvim")
+  colorscheme jellybeans
+endif
 set guioptions=ageimrLt
 set showtabline=2
 set cursorline " Turn on the line shadowing indicating where the cursor is

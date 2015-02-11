@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/bcarls/ana_tree_ccsinglemuon/Makefile'
+let g:netrw_dirhist_2='/Users/bcarls/ana_tree_ccsinglemuon'
+let g:netrw_dirhist_3='/Users/bcarls/ana_tree_ccsinglemuon/Makefile'
