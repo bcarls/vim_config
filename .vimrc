@@ -114,6 +114,13 @@ autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrp_max_files=30
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 " ==================================================================================
 " GUI options
