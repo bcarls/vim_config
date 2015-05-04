@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/bcarls/ana_tree_ccsinglemuon/Makefile'
 let g:netrw_dirhist_2='/Users/bcarls/ana_tree_ccsinglemuon'
 let g:netrw_dirhist_3='/Users/bcarls/ana_tree_ccsinglemuon/Makefile'
+let g:netrw_dirhist_4='/Users/bcarls/aRMicroBooNE_test_1'
+let g:netrw_dirhist_5='/Users/bcarls/aRMicroBooNE_test_1/Assets'
+let g:netrw_dirhist_6='/Users/bcarls/aRMicroBooNE_test_1/Assets/Scripts'

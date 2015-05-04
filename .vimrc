@@ -110,6 +110,11 @@ set laststatus=2 " Always show the statusline
 " Set up vim-commentary
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 
+" Set up CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrp_max_files=30
+
 " ==================================================================================
 " GUI options
 " The statusline options appear under plugins since I am using powerline
