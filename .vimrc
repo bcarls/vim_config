@@ -114,49 +114,6 @@ elseif executable('ack')
         \ --ignore-file=ext:DS_Store'
 endif
 
-let g:ctrlp_user_command = 'ack %s --nocolor -f 
-      \ --ignore-file=ext:d
-      \ --ignore-file=ext:DS_Store'
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-      \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
-
-
-
-" call unite#filters#matcher_default#use(['matcher_fuzzy'])
-" call unite#filters#sorter_default#use(['sorter_rank'])
-" call unite#custom#profile('default', 'context', {
-"               \ 'start_insert': 1
-"               \ })
-
-" " let g:unite_data_directory=s:get_cache_dir('unite')
-" let g:unite_source_history_yank_enable=1
-" let g:unite_source_rec_max_cache_files=5000
-
-" if executable('ag')
-"   let g:unite_source_grep_command='ag'
-"   let g:unite_source_grep_default_opts='--nocolor --line-numbers --nogroup -S -C4'
-"   let g:unite_source_grep_recursive_opt=''
-" elseif executable('ack')
-"   let g:unite_source_grep_command='ack'
-"   let g:unite_source_grep_default_opts='--no-heading --no-color -C4'
-"   let g:unite_source_grep_recursive_opt=''
-" endif
-
-" nnoremap <Leader>t :Unite file_rec/async<cr>
-" nnoremap <space>/ :Unite grep:.<cr>
-" let g:unite_source_history_yank_enable = 1
-" nnoremap <space>y :Unite history/yank<cr>
-" nnoremap <space>s :Unite -quick-match buffer<cr>
-
-" function! s:get_cache_dir(suffix) "{{{
-"   return resolve(expand(s:cache_dir . '/' . a:suffix))
-" endfunction "}}}
-
 
 
 
