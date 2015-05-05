@@ -12,6 +12,8 @@ vim_config
 
 ## To link everything:
 
+The setup.sh script does this, but if you need to again:
+
     ln -s ~/vim_config ~/.vim
     ln -s ~/vim_config/.vimrc ~/.vimrc
 
