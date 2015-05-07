@@ -4,10 +4,6 @@
 " ==================================================================================
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
-if has('win32')
-  source $VIMRUNTIME/mswin.vim
-  behave mswin
-endif
 syntax on
 set backup
 set showcmd
@@ -80,8 +76,9 @@ execute pathogen#infect()
 filetype plugin indent on
 
 
-
+""""""""""""""""""""""""""""""
 " Set up vim-airline 
+""""""""""""""""""""""""""""""
 set laststatus=2 " Always show the statusline
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
@@ -92,13 +89,24 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+""""""""""""""""""""""""""""""
 " Set up vim-commentary
+""""""""""""""""""""""""""""""
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 
+""""""""""""""""""""""""""""""
 " Set up CtrlP
-let g:ctrlp_map = '<Leader>t'
+""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<Leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_height=50
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -114,13 +122,32 @@ elseif executable('ack')
         \ --ignore-file=ext:DS_Store'
 endif
 
+""""""""""""""""""""""""""""""
+" Set up Buffergator
+""""""""""""""""""""""""""""""
 
+" Use the right side of the screen
+let g:buffergator_viewport_split_policy = 'R'
+" I want my own keymappings...
+let g:buffergator_suppress_keymaps = 1
+" Looper buffers
+"let g:buffergator_mru_cycle_loop = 1
+" Go to the previous buffer open
+nmap <leader>jj :BuffergatorMruCyclePrev<cr>
+" Go to the next buffer open
+nmap <leader>kk :BuffergatorMruCycleNext<cr>
+" View the entire list of buffers open
+nmap <leader>bl :BuffergatorOpen<cr>
+" Shared bindings from Solution #1 from earlier
+nmap <leader>T :enew<cr>
+nmap <leader>bq :bp <BAR> bd #<cr>
 
 
 " ==================================================================================
 " GUI options
 " The statusline options appear under plugins since I am using powerline
 " ==================================================================================
+
 set t_Co=256
 " Turn on molokai
 " colorscheme molokai
