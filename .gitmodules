@@ -34,3 +34,9 @@
 [submodule "bundle/vim-buffergator"]
 	path = bundle/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator
+[submodule "autoload/vim-sensible"]
+	path = autoload/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git
+[submodule "vim-pathogen"]
+	path = vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
