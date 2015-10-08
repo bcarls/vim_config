@@ -24,7 +24,11 @@ The setup.sh script does this, but if you need to again:
     
 ## To periodically update the plugins:
     cd ~/vim_config/bundle
-    git submodule foreach git pull
+    git submodule foreach git pull origin master
+    
+If you get an error "You are not currently on a branch.", then do this:
+    git submodule foreach git checkout master
+    git submodule foreach pull origin master
     
 ## To remove a plugin:
 
