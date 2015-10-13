@@ -9,6 +9,7 @@ set backup
 set showcmd
 autocmd BufNewFile,BufRead *.tex setlocal spell " Turn on spell check for Latex
 
+
 " ==================================================================================
 " Setup tab and related options
 " ==================================================================================
@@ -29,8 +30,7 @@ set smarttab      " insert tabs on the start of a line according to
 " ==================================================================================
 " change the mapleader from \ to ,
 let mapleader=","
-inoremap jj <Esc>
-" nmap ,n <Esc>:tabnew 
+" inoremap jk <Esc>
 " Jumps to next row in editor in the case of wrapped lines
 nnoremap j gj
 nnoremap k gk
@@ -52,7 +52,7 @@ map gp :bp<cr>
 map gd :bd<cr>
 " Wrap Latex paragraphs to make them readable, just type gqlp
 map \gq ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\)?1<CR>gq//-1<CR>
-omap lp ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\)?1<CR>//-1<CR>.<CR>
+omap lp ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\)?1<CR>//-1<CR>.<CR>:nohlsearch<CR>
 
 " ==================================================================================
 " Make searching easier
@@ -79,6 +79,18 @@ execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
+" Setup some configurations to make the <Esc> button immediate for neovim
+" This will override vim-sensible
+runtime! plugin/sensible.vim
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+set nottimeout
 
 """"""""""""""""""""""""""""""
 " Set up vim-airline 
@@ -138,8 +150,10 @@ set t_Co=256
 " let g:molokai_original = 1
 " let g:rehash256 = 1
 set guifont=Inconsolata\ for\ Powerline:h15
+" Turn on corporation
+colorscheme corporation
 " Turn on jellybeans
-colorscheme jellybeans
+" colorscheme jellybeans
 " Turn on solarized
 "set background=light
 "colorscheme solarized
