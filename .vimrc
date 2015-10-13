@@ -151,10 +151,12 @@ set t_Co=256
 " let g:rehash256 = 1
 set guifont=Inconsolata\ for\ Powerline:h15
 " Turn on blackdust
-colorscheme blackdust
+" colorscheme blackdust
 " Turn on corporation
 " colorscheme corporation
 " Turn on jellybeans
+colorscheme summerfruit256
+" " Turn on summerfruit256
 " colorscheme jellybeans
 " Turn on solarized
 "set background=light
