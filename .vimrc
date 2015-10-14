@@ -154,13 +154,13 @@ set guifont=Inconsolata\ for\ Powerline:h15
 " colorscheme blackdust
 " Turn on corporation
 " colorscheme corporation
+" Turn on summerfruit256
+" colorscheme summerfruit256
 " Turn on jellybeans
-colorscheme summerfruit256
-" " Turn on summerfruit256
 " colorscheme jellybeans
 " Turn on solarized
-"set background=light
-"colorscheme solarized
+set background=light
+colorscheme solarized
 if has("gui_macvim")
   colorscheme jellybeans
 endif
