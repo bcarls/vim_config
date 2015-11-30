@@ -1,0 +1,1 @@
+/Users/bcarls/vim_config/.vimrc

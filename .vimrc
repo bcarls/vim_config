@@ -138,6 +138,9 @@ elseif executable('ack')
         \ --ignore-file=ext:DS_Store'
 endif
 
+" 
+let g:languagetool_jar = "$HOME/LanguageTool-3.1/languagetool-commandline.jar"
+
 
 " ==================================================================================
 " GUI options
