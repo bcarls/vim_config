@@ -120,8 +120,13 @@ let g:languagetool_jar = "$HOME/LanguageTool-3.1/languagetool-commandline.jar"
 """"""""""""""""""""""""""""""
 " Set up fzf for fuzzy file finding
 """"""""""""""""""""""""""""""
-set rtp+=/usr/local/opt/fzf
 
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin' || os == 'Mac'
+    set rtp+=/usr/local/opt/fzf
+elseif os == 'Linux'
+    set rtp+=~/.fzf
+endif
 
 
 
@@ -166,7 +171,5 @@ set vb t_vb=
 " ==================================================================================
 " Functions
 " ==================================================================================
-
-set rtp+=/usr/local/opt/fzf
 
 
