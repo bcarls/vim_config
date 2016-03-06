@@ -110,36 +110,20 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 """"""""""""""""""""""""""""""
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 
+
 """"""""""""""""""""""""""""""
-" Set up CtrlP
+" Set up languagetool
 """"""""""""""""""""""""""""""
-let g:ctrlp_map = '<Leader>p'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_max_height=50
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-
-nmap <leader>bb :CtrlPBuffer<cr>
-nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>
-
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-        \ --ignore .git
-        \ --ignore .svn
-        \ --ignore .hg
-        \ --ignore .DS_Store
-        \ --ignore "**/*.pyc"
-        \ -g ""'
-elseif executable('ack')
-  let g:ctrlp_user_command = 'ack %s --nocolor -f 
-        \ --ignore-file=ext:d
-        \ --ignore-file=ext:DS_Store'
-endif
-
-" 
 let g:languagetool_jar = "$HOME/LanguageTool-3.1/languagetool-commandline.jar"
+
+
+""""""""""""""""""""""""""""""
+" Set up fzf for fuzzy file finding
+""""""""""""""""""""""""""""""
+set rtp+=/usr/local/opt/fzf
+
+
+
 
 
 " ==================================================================================
@@ -183,6 +167,6 @@ set vb t_vb=
 " Functions
 " ==================================================================================
 
-
+set rtp+=/usr/local/opt/fzf
 
 
