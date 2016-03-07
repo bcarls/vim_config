@@ -93,19 +93,6 @@ endif
 set nottimeout
 
 """"""""""""""""""""""""""""""
-" Set up vim-airline 
-""""""""""""""""""""""""""""""
-set laststatus=2 " Always show the statusline
-let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline_left_sep=''
-"let g:airline_right_sep=''
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-""""""""""""""""""""""""""""""
 " Set up vim-commentary
 """"""""""""""""""""""""""""""
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
@@ -129,6 +116,15 @@ elseif os == 'Linux'
 endif
 
 
+""""""""""""""""""""""""""""""
+" Set up lightline
+""""""""""""""""""""""""""""""
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+\}
+
+
 
 
 " ==================================================================================
@@ -137,19 +133,7 @@ endif
 " ==================================================================================
 
 set t_Co=256
-" Turn on molokai
-" colorscheme molokai
-" let g:molokai_original = 1
-" let g:rehash256 = 1
 set guifont=Inconsolata\ for\ Powerline:h15
-" Turn on blackdust
-" colorscheme blackdust
-" Turn on corporation
-" colorscheme corporation
-" Turn on summerfruit256
-" colorscheme summerfruit256
-" Turn on jellybeans
-" colorscheme jellybeans
 " Turn on solarized
 set background=light
 colorscheme solarized
