@@ -71,13 +71,23 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 " ==================================================================================
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-" Other plugin options appear here
+" Setup vim-plug
 " ==================================================================================
-execute pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
+
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/LaTeX-Box-Team/LaTeX-Box.git'
+Plug 'https://github.com/vim-scripts/LanguageTool.git'
+Plug 'https://github.com/junegunn/fzf.vim.git'
+Plug 'https://github.com/itchyny/lightline.vim.git'
+Plug 'https://github.com/scrooloose/syntastic.git'
+Plug 'https://github.com/altercation/vim-colors-solarized.git'
+Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'https://github.com/easymotion/vim-easymotion.git'
+Plug 'https://github.com/tpope/vim-sensible.git'
+Plug 'https://github.com/tpope/vim-sleuth.git'
+" Add plugins to &runtimepath
+call plug#end()
+
 
 " Setup some configurations to make the <Esc> button immediate for neovim
 " This will override vim-sensible
