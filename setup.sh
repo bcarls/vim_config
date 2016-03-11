@@ -4,6 +4,3 @@
 ln -s ~/vim_config ~/.vim
 ln -s ~/vim_config/.vimrc ~/.vimrc
 
-# Install plugins
-vim +PlugInstall +qall
-
