@@ -1,6 +1,8 @@
 vim_config
 ==========
 
+# This is out of date, vim-plug used for plugins. Most of this information is old.
+
 ## To install:
 
     rm ~/.vimrc 
