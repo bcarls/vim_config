@@ -1,8 +1,6 @@
 vim_config
 ==========
 
-# This is out of date, vim-plug used for plugins. Most of this information is old.
-
 ## To install:
 
     rm ~/.vimrc 
@@ -19,22 +17,7 @@ The setup.sh script does this, but if you need to again:
     ln -s ~/vim_config ~/.vim
     ln -s ~/vim_config/.vimrc ~/.vimrc
 
-## To install a new plugin, for example nerdcommenter:
+## Plugins
 
-    cd vim_config/bundle/
-    git submodule add https://github.com/scrooloose/nerdcommenter.git
-    
-## To periodically update the plugins:
-    cd ~/vim_config/bundle
-    git submodule foreach git pull origin master
-    
-If you get an error "You are not currently on a branch.", then do this:
-    git submodule foreach git checkout master
-    git submodule foreach pull origin master
-    
-## To remove a plugin:
-
-    git submodule deinit bundle/nerdcommenter
-    git rm bundle/nerdcommenter
-    
+They are handled by vim-plug
 
