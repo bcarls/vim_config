@@ -115,6 +115,26 @@ elseif os == 'Linux'
     set rtp+=~/.fzf
 endif
 
+function! BufList()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! BufOpen(e)
+  execute 'buffer '. matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader>b :call fzf#run({
+\   'source':      reverse(BufList()),
+\   'sink':        function('BufOpen'),
+\   'options':     '+m',
+\   'tmux_height': '40%'
+\ })<CR>
+
+nnoremap <silent> <Leader>p :FZF<CR>
+
 
 """"""""""""""""""""""""""""""
 " Set up lightline
