@@ -176,7 +176,7 @@ if has("gui_macvim")
   colorscheme jellybeans
 endif
 set guioptions=ageimrLt
-set showtabline=2
+set showtabline=1
 " set cursorline " Turn on the line shadowing indicating where the cursor is
 set ttyfast " Send more characters for redraws
 " Turn on relative numbers for normal mode and absolute numbers for inset mode
