@@ -19,5 +19,5 @@ The setup.sh script does this, but if you need to again:
 
 ## Plugins
 
-They are handled by vim-plug
+They are handled by [vim-plug](https://github.com/junegunn/vim-plug). Plugins can trivially installed via the .vimrc. vim-plug will install the plugins on the first install.
 
