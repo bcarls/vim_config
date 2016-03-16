@@ -1,3 +1,6 @@
+This has been depreciated. Go to [here](https://github.com/bcarls/dotfiles).
+
+
 vim_config
 ==========
 
